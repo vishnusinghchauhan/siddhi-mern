@@ -3,8 +3,17 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const fileUpload = require('express-fileupload');
 const errorMiddleware = require('./middlewares/error');
+const cors = require('cors'); // Import cors
+
 
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true 
+}));
 
 // config
 if (process.env.NODE_ENV !== 'production') {
