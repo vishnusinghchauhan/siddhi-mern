@@ -28,13 +28,13 @@ module.exports = {
       pink: colors.pink,
       // custom colors
       primary: {
-        blue: '#2874f0',
-        lightGreen: '#14be47',
+        blue: '#388e3c',
+        lightGreen: '#009688',
         green: '#388e3c',
         yellow: '#ff9f00',
-        orange: '#fb641b',
-        darkBlue: '#172337',
-        grey: '#878787',
+        orange: '#2e7d32',
+        darkBlue: '#2e7d32',
+        grey: '#8bc34a',
       },
     },
     spacing: {
