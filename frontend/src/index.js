@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-//import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client'
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -8,7 +7,11 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { SnackbarProvider } from 'notistack';
 
-ReactDOM.render(
+// Create a root for the app
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+
+// Render your application
+root.render(
   <React.StrictMode>
     <Provider store={store}>
       <SnackbarProvider
@@ -23,6 +26,5 @@ ReactDOM.render(
         </Router>
       </SnackbarProvider>
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
