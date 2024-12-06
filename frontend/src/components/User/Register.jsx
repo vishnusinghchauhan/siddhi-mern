@@ -55,7 +55,7 @@ const Register = () => {
         formData.set("gender", gender);
         formData.set("password", password);
         formData.set("avatar", avatar);
-
+        console.log("----user--",user)
         dispatch(registerUser(formData));
     }
 
