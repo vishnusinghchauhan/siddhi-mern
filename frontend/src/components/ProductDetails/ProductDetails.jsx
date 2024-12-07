@@ -200,13 +200,13 @@ const ProductDetails = () => {
                                     {/* <!-- price desc --> */}
 
                                     {/* <!-- banks offers --> */}
-                                    <p className="text-md font-medium">Available offers</p>
+                                    {/* <p className="text-md font-medium">Available offers</p>
                                     {Array(3).fill("").map((el, i) => (
                                         <p className="text-sm flex items-center gap-1" key={i}>
                                             <span className="text-primary-lightGreen"><LocalOfferIcon sx={{ fontSize: "20px" }} /></span>
                                             <span className="font-medium ml-2">Bank Offer</span> 15% Instant discount on first Siddhi Ceatives Pay Later order of 500 and above <Link className="text-primary-blue font-medium" to="/">T&C</Link>
                                         </p>
-                                    ))}
+                                    ))} */}
                                     {/* <!-- banks offers --> */}
 
                                     {/* <!-- warranty & brand --> */}

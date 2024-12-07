@@ -31,13 +31,14 @@ const Header = () => {
           <Link className="h-7 mr-1 sm:mr-4" to="/">
             <img draggable="false" className="h-full w-full object-contain" src={logo} alt="Siddhi Ceativeseatives Logo" />
           </Link>
-
           <Searchbar />
         </div>
         {/* <!-- logo & search container --> */}
 
         {/* <!-- right navs --> */}
         <div className="flex items-center justify-between ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative">
+
+          <Link to="/products" className="flex items-center text-white font-medium">Shop</Link>
 
           {isAuthenticated === false ?
             <Link to="/login" className="px-3 sm:px-9 py-0.5 text-primary-blue bg-white border font-medium rounded-sm cursor-pointer">Login</Link>

@@ -13,32 +13,20 @@ const footerLinks = [
     links: [
       {
         name: "Contact Us",
-        redirect: "https://www.Siddhi Ceatives.com/helpcentre",
+        redirect: "#",
       },
       {
         name: "About Us",
-        redirect: "https://www.Siddhi Ceatives.com/about-us",
+        redirect: "#",
       },
       {
         name: "Careers",
-        redirect: "https://www.Siddhi Ceativescareers.com",
+        redirect: "#",
       },
       {
         name: "Siddhi Ceatives Stories",
-        redirect: "https://stories.Siddhi Ceatives.com",
-      },
-      {
-        name: "Press",
-        redirect: "https://stories.Siddhi Ceatives.com/category/top-stories/news",
-      },
-      {
-        name: "Siddhi Ceatives Wholesale",
-        redirect: "https://www.Siddhi Ceativeswholesale.com",
-      },
-      {
-        name: "Corporate Information",
-        redirect: "https://www.Siddhi Ceatives.com/corporate-information",
-      },
+        redirect: "#",
+      }
     ]
   },
   {
@@ -46,19 +34,11 @@ const footerLinks = [
     links: [
       {
         name: "Payments",
-        redirect: "https://www.Siddhi Ceatives.com/pages/payments",
+        redirect: "#",
       },
       {
         name: "Shipping",
-        redirect: "https://www.Siddhi Ceatives.com/pages/shipping",
-      },
-      {
-        name: "Cancellation & Returns",
-        redirect: "https://www.Siddhi Ceatives.com/helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG",
-      },
-      {
-        name: "FAQ",
-        redirect: "https://www.Siddhi Ceatives.com/helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG",
+        redirect: "#",
       }
     ]
   },
@@ -67,28 +47,16 @@ const footerLinks = [
     links: [
       {
         name: "Return Policy",
-        redirect: "https://www.Siddhi Ceatives.com/pages/returnpolicy",
+        redirect: "#",
       },
       {
         name: "Terms Of Use",
-        redirect: "https://www.Siddhi Ceatives.com/pages/terms",
+        redirect: "#",
       },
       {
         name: "Security",
-        redirect: "https://www.Siddhi Ceatives.com/pages/paymentsecurity",
-      },
-      {
-        name: "Privacy",
-        redirect: "https://www.Siddhi Ceatives.com/pages/privacypolicy",
-      },
-      {
-        name: "Sitemap",
-        redirect: "https://www.Siddhi Ceatives.com/sitemap",
-      },
-      {
-        name: "EPR Compliance",
-        redirect: "https://www.Siddhi Ceatives.com/pages/ewaste-compliance-tnc",
-      },
+        redirect: "#",
+      }
     ]
   },
   {
@@ -96,15 +64,11 @@ const footerLinks = [
     links: [
       {
         name: "Facebook",
-        redirect: "https://www.facebook.com/Siddhi Ceatives",
+        redirect: "#",
       },
       {
-        name: "Twitter",
-        redirect: "https://twitter.com/Siddhi Ceatives",
-      },
-      {
-        name: "YouTube",
-        redirect: "https://www.youtube.com/Siddhi Ceatives",
+        name: "Instagram",
+        redirect: "#",
       }
     ]
   }
@@ -142,25 +106,19 @@ const Footer = () => {
             <div className="w-full sm:w-5/12 my-6 mx-5 sm:mx-0 flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between">
               <div className="w-full sm:w-1/2">
                 <h2 className="text-primary-grey">Mail Us:</h2>
-                <p className="mt-2 leading-5">Siddhi Ceatives Internet Private Limited,<br />
-                  Buildings Alyssa, Begonia &<br />
-                  Clove Embassy Tech Village,<br />
-                  Outer Ring Road, Devarabeesanahalli Village,<br />
-                  Bengaluru, 560103,<br />
-                  Karnataka, India
+                <p className="mt-2 leading-5">Siddhi Ceatives Private Limited,<br />
+                  support@siddhicreatives.com
                 </p>
               </div>
 
               <div className="w-full sm:w-1/2">
                 <h2 className="text-primary-grey">Registered Office Address:</h2>
-                <p className="mt-2 leading-5">Siddhi Ceativeseativeseativeseatives Internet Private Limited,<br />
-                  Buildings Alyssa, Begonia &<br />
-                  Clove Embassy Tech Village,<br />
-                  Outer Ring Road, Devarabeesanahalli Village,<br />
-                  Bengaluru, 560103,<br />
-                  Karnataka, India <br />
+                <p className="mt-2 leading-5">Siddhi Ceatives Private Limited,<br />
+                  Govindpura Sanganer &<br />
+                  Jaipur, 302029,<br />
+                  Rajasthan, India
                   CIN : U51109KA2012PTC066107<br />
-                  Telephone: <a className="text-primary-blue" href="tel:18002029898">1800 202 9898</a>
+                  Telephone: <a className="text-primary-blue" href="tel:18002029898121">1800 202 121</a>
                 </p>
               </div>
             </div>

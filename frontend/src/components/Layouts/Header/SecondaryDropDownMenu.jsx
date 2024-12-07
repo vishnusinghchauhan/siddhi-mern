@@ -27,11 +27,6 @@ const SecondaryDropDownMenu = () => {
             icon: <TrendingUpIcon sx={{ fontSize: "18px" }} />,
             redirect: "https://advertising.SiddhiCeatives.com",
         },
-        {
-            title: "Download App",
-            icon: <DownloadIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://www.SiddhiCeatives.com/mobile-apps",
-        },
     ];
 
     return (
