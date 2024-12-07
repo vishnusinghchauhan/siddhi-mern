@@ -177,7 +177,7 @@ const ProductDetails = () => {
                             <div className="flex-1 py-2 px-3">
 
                                 {/* <!-- whole product description --> */}
-                                <div className="flex flex-col gap-2 mb-4">
+                                <div className="flex flex-col gap-2 mb-3">
 
                                     <h2 className="text-xl">{product.name}</h2>
                                     {/* <!-- rating badge --> */}
