@@ -37,6 +37,7 @@ import UpdateUser from './components/Admin/UpdateUser';
 import ReviewsTable from './components/Admin/ReviewsTable';
 import Wishlist from './components/Wishlist/Wishlist';
 import NotFound from './components/NotFound';
+import AboutPage from './components/Pages/AboutPage';
 
 function App() {
 
@@ -92,6 +93,8 @@ function App() {
         <Route path="/products/:keyword" element={<Products />} />
 
         <Route path="/cart" element={<Cart />} />
+        <Route path="/about" element={<AboutPage />} />
+
 
         {/* order process */}
         <Route path="/shipping" element={

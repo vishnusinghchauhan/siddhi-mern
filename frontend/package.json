@@ -57,5 +57,8 @@
     "postcss": "^8.x.x",
     "react-scripts": "^5.x.x",
     "tailwindcss": "^3.x.x"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }

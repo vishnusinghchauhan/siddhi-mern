@@ -1,10 +1,4 @@
-import React from 'react'; // Import React
-import { useEffect, useState } from 'react';
-import WorkIcon from '@mui/icons-material/Work';
-import StarsIcon from '@mui/icons-material/Stars';
-import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import HelpIcon from '@mui/icons-material/Help';
-import paymentMethods from '../../../assets/images/payment-methods.svg';
+import React, { useEffect, useState } from 'react'; // Import React
 import { useLocation } from 'react-router-dom';
 
 const footerLinks = [
