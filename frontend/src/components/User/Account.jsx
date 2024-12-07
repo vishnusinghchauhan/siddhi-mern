@@ -93,32 +93,16 @@ const Account = () => {
                                     </div>
                                     {/* <!-- email address info --> */}
 
-                                    {/* <!-- mobile number info --> */}
-                                    <div className="flex flex-col gap-5 items-start">
-                                        <span className="font-medium text-lg">Mobile Number
-                                            <span className="text-sm text-primary-blue font-medium ml-3 sm:ml-8 cursor-pointer" id="mobEditBtn">Edit</span>
-                                        </span>
-
-                                        <div className="flex items-center gap-3">
-                                            <div className="flex flex-col gap-0.5 sm:w-64 px-3 py-1.5 rounded-sm border bg-gray-100 cursor-not-allowed focus-within:border-primary-blue">
-                                                <label className="text-xs text-gray-500">Mobile Number</label>
-                                                <input type="tel" value="+919876543210" className="text-sm outline-none border-none text-gray-500 cursor-not-allowed" disabled />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    {/* <!-- mobile number info --> */}
-
                                     {/* <!-- faqs --> */}
                                     <div className="flex flex-col gap-4 mt-4">
                                         <span className="font-medium text-lg mb-2">FAQS</span>
                                         <h4 className="text-sm font-medium">What happens when I update my email address (or mobile number)?</h4>
                                         <p className="text-sm">Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).</p>
 
-                                        <h4 className="text-sm font-medium">When will my Siddhi Ceativeseativeseativeseatives account be updated with the new email address (or mobile number)?</h4>
+                                        <h4 className="text-sm font-medium">When will my Siddhi Ceatives account be updated with the new email address (or mobile number)?</h4>
                                         <p className="text-sm">It happens as soon as you confirm the verification code sent to your email (or mobile) and save the changes.</p>
 
-                                        <h4 className="text-sm font-medium">What happens to my existing Siddhi Ceativeseativeseativeseativeseativeseatives account when I update my email address (or mobile number)?</h4>
+                                        <h4 className="text-sm font-medium">What happens to my existing Siddhi Ceatives account when I update my email address (or mobile number)?</h4>
                                         <p className="text-sm">Updating your email address (or mobile number) doesn't invalidate your account. Your account remains fully functional. You'll continue seeing your Order history, saved information and personal details.</p>
 
                                         <h4 className="text-sm font-medium">Does my Seller account get affected when I update my email address?</h4>
@@ -127,13 +111,9 @@ const Account = () => {
                                     </div>
                                     {/* <!-- faqs --> */}
 
-                                    {/* <!-- deactivate account --> */}
-                                    <Link className="text-sm text-primary-blue font-medium" to="/">Deactivate Account</Link>
-                                    {/* <!-- deactivate account --> */}
                                 </div>
                                 {/* <!-- edit info container --> */}
 
-                                <img draggable="false" className="w-full object-contain" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/myProfileFooter_4e9fe2.png" alt="footer" />
                             </div>
                             {/* <!-- details column --> */}
                         </div>

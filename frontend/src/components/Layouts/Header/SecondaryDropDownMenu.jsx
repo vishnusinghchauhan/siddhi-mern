@@ -1,32 +1,19 @@
-import React from 'react'; // Import React
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import DownloadIcon from '@mui/icons-material/Download';
+import React from 'react'; // Import React
 
 const SecondaryDropDownMenu = () => {
     const navs = [
         {
-            title: "Notification Preferences",
-            icon: <NotificationsIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://www.SiddhiCeativeseativeseativeseatives.com/communication-preferences/push",
-        },
-        {
-            title: "Sell on Siddhi Ceativeseativeseatives",
+            title: "Sell on Siddhi Creatives",
             icon: <BusinessCenterIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://SiddhiCeativeseatives.com/sell-online",
+            redirect: "/",
         },
         {
             title: "24x7 Customer Care",
             icon: <LiveHelpIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://www.SiddhiCeatives.com/helpcentre",
-        },
-        {
-            title: "Advertise",
-            icon: <TrendingUpIcon sx={{ fontSize: "18px" }} />,
-            redirect: "https://advertising.SiddhiCeatives.com",
-        },
+            redirect: "/",
+        }
     ];
 
     return (

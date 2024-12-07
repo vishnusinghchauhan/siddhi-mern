@@ -22,8 +22,10 @@ const Header = () => {
   return (
 
     <header className="bg-primary-blue fixed top-0 py-2.5 w-full z-10">
+      
 
       {/* <!-- navbar container --> */}
+      
       <div className="w-full sm:w-9/12 px-1 sm:px-4 m-auto flex justify-between items-center relative">
 
         {/* <!-- logo & search container --> */}
@@ -38,8 +40,7 @@ const Header = () => {
         {/* <!-- right navs --> */}
         <div className="flex items-center justify-between ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative">
 
-          <Link to="/products" className="flex items-center text-white font-medium">Shop</Link>
-
+          
           {isAuthenticated === false ?
             <Link to="/login" className="px-3 sm:px-9 py-0.5 text-primary-blue bg-white border font-medium rounded-sm cursor-pointer">Login</Link>
             :
@@ -67,6 +68,8 @@ const Header = () => {
             }
             Cart
           </Link>
+          <Link to="/products" className="flex items-center text-white font-medium">Shop</Link>
+
         </div>
         {/* <!-- right navs --> */}
 
