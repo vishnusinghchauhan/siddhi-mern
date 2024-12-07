@@ -1,0 +1,8 @@
+{
+    "extends": "react-app",
+    "rules": {
+      // Add any custom rules here, e.g.:
+      "no-console": "warn", // Warn for console logs
+      "no-unused-vars": "warn" // Warn for unused variables
+    }
+  }
