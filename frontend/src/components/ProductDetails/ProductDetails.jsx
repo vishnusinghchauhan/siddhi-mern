@@ -132,8 +132,8 @@ const ProductDetails = () => {
             {loading ? <Loader /> : (
                 <>
                     <MetaData title={product.name} />
-                    <MinCategory />
-                    <main className="mt-12 sm:mt-0">
+                    {/* <MinCategory /> */}
+                    <main className="mt-12 sm:mt-16">
 
                         {/* <!-- product image & description container --> */}
                         <div className="w-full flex flex-col sm:flex-row bg-white sm:p-2 relative">
@@ -266,9 +266,9 @@ const ProductDetails = () => {
                                     {/* <!-- seller details --> */}
 
                                     {/* <!-- Siddhi Ceativeseativeseativeseatives plus banner --> */}
-                                    <div className="sm:w-1/2 mt-4 border">
+                                    {/* <div className="sm:w-1/2 mt-4 border">
                                         <img draggable="false" className="w-full h-full object-contain" src="https://rukminim1.flixcart.com/lockin/763/305/images/promotion_banner_v2_active.png" alt="" />
-                                    </div>
+                                    </div> */}
                                     {/* <!-- Siddhi Ceativeseativeseativeseatives plus banner --> */}
 
                                     {/* <!-- description details --> */}

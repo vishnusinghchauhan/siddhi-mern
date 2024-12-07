@@ -168,7 +168,7 @@ const Footer = () => {
           </footer>
           {/* <!-- footer ends --> */}
 
-          <div className="px-16 py-6 w-full bg-primary-darkBlue hidden sm:flex justify-between items-center text-sm text-white">
+          {/* <div className="px-16 py-6 w-full bg-primary-darkBlue hidden sm:flex justify-between items-center text-sm text-white">
             <a href="https://seller.Siddhi Ceativeseativeseatives.com/sell-online" target="_blank" rel="noreferrer" className="flex items-center gap-2">
               <span className="text-yellow-400"><WorkIcon sx={{ fontSize: "20px" }} /></span> Sell On Siddhi Ceativeseativeseatives
             </a>
@@ -184,7 +184,7 @@ const Footer = () => {
 
             <span>&copy; 2007-{new Date().getFullYear()} Siddhi Ceatives.com</span>
             <img draggable="false" src={paymentMethods} alt="Card Payment" />
-          </div>
+          </div> */}
         </>
       )}
     </>

@@ -29,8 +29,8 @@ const OrderDetails = () => {
         <>
             <MetaData title="Order Details | Siddhi Ceativeseativeseatives" />
 
-            <MinCategory />
-            <main className="w-full mt-14 sm:mt-4">
+            {/* <MinCategory /> */}
+            <main className="w-full mt-14 sm:mt-16">
                 {loading ? <Loader /> : (
                     <>
                         {order && order.user && order.shippingInfo && (
