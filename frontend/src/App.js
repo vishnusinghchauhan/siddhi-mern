@@ -38,6 +38,8 @@ import ReviewsTable from './components/Admin/ReviewsTable';
 import Wishlist from './components/Wishlist/Wishlist';
 import NotFound from './components/NotFound';
 import AboutPage from './components/Pages/AboutPage';
+import CareerPage from './components/Pages/CareerPage';
+import ContactPage from './components/Pages/ContactPage';
 
 function App() {
 
@@ -94,6 +96,10 @@ function App() {
 
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/careers" element={<CareerPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+
+
 
 
         {/* order process */}
