@@ -1,11 +1,11 @@
+import { SnackbarProvider } from 'notistack';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
+import './index.css';
 import store from './store';
-import { SnackbarProvider } from 'notistack';
 
 ReactDOM.render(
   <React.StrictMode>
