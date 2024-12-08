@@ -1,3 +1,6 @@
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import StarIcon from '@mui/icons-material/Star';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Pagination from '@mui/material/Pagination';
@@ -5,20 +8,15 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import Slider from '@mui/material/Slider';
 import { useSnackbar } from 'notistack';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { clearErrors, getProducts } from '../../actions/productAction';
+import { categories } from '../../utils/constants';
 import Loader from '../Layouts/Loader';
+import MetaData from '../Layouts/MetaData';
 import MinCategory from '../Layouts/MinCategory';
 import Product from './Product';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import StarIcon from '@mui/icons-material/Star';
-import { categories } from '../../utils/constants';
-import MetaData from '../Layouts/MetaData';
-import { getRandomProducts } from '../../utils/functions';
-import { useLocation } from 'react-router-dom';
 
 const Products = () => {
 

@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import Chart from 'chart.js/auto'
-import { Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
-import { getAdminProducts } from '../../actions/productAction';
-import { useSelector, useDispatch } from 'react-redux';
+import { Bar, Doughnut, Line, Pie } from 'react-chartjs-2';
+import { useDispatch, useSelector } from 'react-redux';
 import { getAllOrders } from '../../actions/orderAction';
+import { getAdminProducts } from '../../actions/productAction';
 import { getAllUsers } from '../../actions/userAction';
 import { categories } from '../../utils/constants';
 import MetaData from '../Layouts/MetaData';
