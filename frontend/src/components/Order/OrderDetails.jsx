@@ -6,15 +6,12 @@ import { useParams } from 'react-router-dom';
 import { clearErrors, getOrderDetails } from '../../actions/orderAction';
 import Loader from '../Layouts/Loader';
 import TrackStepper from './TrackStepper';
-import MinCategory from '../Layouts/MinCategory';
 import MetaData from '../Layouts/MetaData';
 
 const OrderDetails = () => {
-
     const dispatch = useDispatch();
     const { enqueueSnackbar } = useSnackbar();
     const params = useParams();
-
     const { order, error, loading } = useSelector((state) => state.orderDetails);
 
     useEffect(() => {
@@ -27,54 +24,42 @@ const OrderDetails = () => {
 
     return (
         <>
-            <MetaData title="Order Details | Siddhi Ceativeseativeseatives" />
-
-            {/* <MinCategory /> */}
+            <MetaData title="Order Details | Siddhi Creatives" />
             <main className="w-full mt-14 sm:mt-16">
                 {loading ? <Loader /> : (
                     <>
                         {order && order.user && order.shippingInfo && (
                             <div className="flex flex-col gap-4 max-w-6xl mx-auto">
-
-                                <div className="flex bg-white shadow rounded-sm min-w-full">
-                                    <div className="sm:w-1/2 border-r">
-                                        <div className="flex flex-col gap-3 my-8 mx-10">
-                                            <h3 className="font-medium text-lg">Delivery Address</h3>
-                                            <h4 className="font-medium">{order.user.name}</h4>
-                                            <p className="text-sm">{`${order.shippingInfo.address}, ${order.shippingInfo.city}, ${order.shippingInfo.state} - ${order.shippingInfo.pincode}`}</p>
-                                            <div className="flex gap-2 text-sm">
-                                                <p className="font-medium">Email</p>
-                                                <p>{order.user.email}</p>
-                                            </div>
-                                            <div className="flex gap-2 text-sm">
-                                                <p className="font-medium">Phone Number</p>
-                                                <p>{order.shippingInfo.phoneNo}</p>
-                                            </div>
-                                        </div>
+                                {/* Delivery Address Card */}
+                                <div className="bg-white shadow-lg rounded-lg p-6 mb-4">
+                                    <h3 className="font-medium text-lg">Delivery Address</h3>
+                                    <h4 className="font-semibold">{order.user.name}</h4>
+                                    <p className="text-sm">{`${order.shippingInfo.address}, ${order.shippingInfo.city}, ${order.shippingInfo.state} - ${order.shippingInfo.pincode}`}</p>
+                                    <div className="flex gap-2 text-sm">
+                                        <span className="font-medium">Email:</span>
+                                        <span>{order.user.email}</span>
+                                    </div>
+                                    <div className="flex gap-2 text-sm">
+                                        <span className="font-medium">Phone Number:</span>
+                                        <span>{order.shippingInfo.phoneNo}</span>
                                     </div>
                                 </div>
 
-                                {order.orderItems && order.orderItems.map((item) => {
+                                {/* Order Items Grid */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    {order.orderItems.map((item) => {
+                                        const { _id, image, name, price, quantity } = item;
 
-                                    const { _id, image, name, price, quantity } = item;
+                                        return (
+                                            <div className="bg-white shadow-md rounded-lg p-4 flex flex-col" key={_id}>
+                                                <img draggable="false" className="h-32 w-full object-contain mb-2" src={image} alt={name} />
+                                                <p className="text-sm font-semibold">{name.length > 60 ? `${name.substring(0, 60)}...` : name}</p>
+                                                <p className="text-xs text-gray-600">Quantity: {quantity}</p>
+                                                <p className="text-xs text-gray-600">Price: ₹{price.toLocaleString()}</p>
+                                                <span className="font-medium">Total: ₹{(quantity * price).toLocaleString()}</span>
 
-                                    return (
-                                        <div className="flex flex-col sm:flex-row min-w-full shadow rounded-sm bg-white px-2 py-5" key={_id}>
-
-                                            <div className="flex flex-col sm:flex-row sm:w-1/2 gap-2">
-                                                <div className="w-full sm:w-32 h-20">
-                                                    <img draggable="false" className="h-full w-full object-contain" src={image} alt={name} />
-                                                </div>
-                                                <div className="flex flex-col gap-1 overflow-hidden">
-                                                    <p className="text-sm">{name.length > 60 ? `${name.substring(0, 60)}...` : name}</p>
-                                                    <p className="text-xs text-gray-600 mt-2">Quantity: {quantity}</p>
-                                                    <p className="text-xs text-gray-600">Price: ₹{price.toLocaleString()}</p>
-                                                    <span className="font-medium">Total: ₹{(quantity * price).toLocaleString()}</span>
-                                                </div>
-                                            </div>
-
-                                            <div className="flex flex-col w-full sm:w-1/2">
-                                                <h3 className="font-medium sm:text-center">Order Status</h3>
+                                                {/* Order Status Section */}
+                                                <h3 className="font-medium mt-4">Order Status</h3>
                                                 <TrackStepper
                                                     orderOn={order.createdAt}
                                                     shippedAt={order.shippedAt}
@@ -84,11 +69,9 @@ const OrderDetails = () => {
                                                     }
                                                 />
                                             </div>
-
-                                        </div>
-                                    )
-                                })
-                                }
+                                        );
+                                    })}
+                                </div>
                             </div>
                         )}
                     </>

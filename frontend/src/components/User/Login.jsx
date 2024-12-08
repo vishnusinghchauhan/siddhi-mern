@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // Ensure React is imported
+import React, { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -37,68 +37,64 @@ const Login = () => {
 
     return (
         <>
-            <MetaData title="Login | Siddhi Ceatives" />
+            <MetaData title="Login | Siddhi Creatives" />
 
             {loading && <BackdropLoader />}
-            <main className="w-full mt-12 sm:pt-20 sm:mt-0">
-                {/* <!-- row --> */}
-                <div className="flex sm:w-4/6 sm:mt-4 m-auto mb-7 bg-white shadow-lg">
-                    {/* <!-- sidebar column  --> */}
+            <main className="flex flex-col items-center w-full mt-12 sm:pt-20 sm:mt-0">
+                <div className="flex sm:w-4/6 w-full bg-white shadow-lg rounded-lg overflow-hidden">
+                    {/* Sidebar Column */}
                     <div className="loginSidebar bg-primary-blue p-10 pr-12 hidden sm:flex flex-col gap-4 w-2/5">
-                        <h1 className="font-medium text-white text-3xl">Login</h1>
-                        <p className="text-gray-200 text-lg">Get access to your Orders, Wishlist and Recommendations</p>
+                        <h1 className="font-bold text-white text-4xl">Siddhi Creatives</h1>
+                        <p className="text-gray-200 text-lg">Access your Orders, Wishlist and Recommendations easily.</p>
                     </div>
-                    {/* <!-- sidebar column  --> */}
 
-                    {/* <!-- login column --> */}
-                    <div className="flex-1 overflow-hidden">
-                        {/* <!-- edit info container --> */}
-                        <div className="text-center py-10 px-4 sm:px-14">
-                            {/* <!-- input container --> */}
-                            <form onSubmit={handleLogin}>
-                                <div className="flex flex-col w-full gap-4">
-                                    <TextField
-                                        fullWidth
-                                        id="email"
-                                        label="Email"
-                                        type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                    />
-                                    <TextField
-                                        fullWidth
-                                        id="password"
-                                        label="Password"
-                                        type="password"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
-                                        required
-                                    />
-                                    {/* <span className="text-xxs text-red-500 font-medium text-left mt-0.5">Please enter valid Email ID/Mobile number</span> */}
-
-                                    {/* <!-- button container --> */}
-                                    <div className="flex flex-col gap-2.5 mt-2 mb-32">
-                                        <p className="text-xs text-primary-grey text-left">
-                                            By continuing, you agree to Siddhi Ceativeseativeseativeseatives's 
-                                            <a href="https://www.SiddhiCeatives.com/pages/terms" className="text-primary-blue"> Terms of Use</a> and 
-                                            <a href="https://www.flipkart.com/pages/privacypolicy" className="text-primary-blue"> Privacy Policy.</a>
-                                        </p>
-                                        <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Login</button>
-                                        <Link to="/password/forgot" className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium">Forgot Password?</Link>
-                                    </div>
-                                    {/* <!-- button container --> */}
-                                </div>
-                            </form>
-                            {/* <!-- input container --> */}
-
-                            <Link to="/register" className="font-medium text-sm text-primary-blue">New to Flipkart? Create an account</Link>
-                        </div>
-                        {/* <!-- edit info container --> */}
+                    {/* Login Column */}
+                    <div className="flex-1 p-8">
+                        <h2 className="text-center text-2xl font-semibold mb-6">Login to Your Account</h2>
+                        <form onSubmit={handleLogin} className="flex flex-col gap-4">
+                            <TextField
+                                fullWidth
+                                id="email"
+                                label="Email"
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                variant="outlined"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                            />
+                            <TextField
+                                fullWidth
+                                id="password"
+                                label="Password"
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                variant="outlined"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                            />
+                            <div className="flex flex-col gap-2 mt-4 mb-6">
+                                <p className="text-xs text-primary-grey text-left">
+                                    By continuing, you agree to Siddhi Creatives's 
+                                    <Link to="/terms" className="text-primary-blue"> Terms of Use</Link> and 
+                                    <Link to="/privacy" className="text-primary-blue"> Privacy Policy.</Link>
+                                </p>
+                                <button type="submit" className="bg-primary-orange text-white py-3 rounded-lg shadow hover:bg-orange-600 transition duration-300 ease-in-out">
+                                    Login
+                                </button>
+                                <Link to="/password/forgot" className="text-primary-blue text-center py-3 border rounded-lg hover:bg-gray-100 transition duration-200 ease-in-out">
+                                    Forgot Password?
+                                </Link>
+                            </div>
+                        </form>
+                        <Link to="/register" className="font-medium text-sm text-primary-blue text-center mt-4">New to Siddhi Creatives? Create an account</Link>
                     </div>
-                    {/* <!-- login column --> */}
                 </div>
-                {/* <!-- row --> */}
             </main>
         </>
     );

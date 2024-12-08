@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PriceSidebar from './PriceSidebar';
 import Stepper from './Stepper';
@@ -15,7 +14,6 @@ import MetaData from '../Layouts/MetaData';
 import states from '../../utils/states';
 
 const Shipping = () => {
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { enqueueSnackbar } = useSnackbar();
@@ -25,7 +23,7 @@ const Shipping = () => {
 
     const [address, setAddress] = useState(shippingInfo.address);
     const [city, setCity] = useState(shippingInfo.city);
-    const [country, setCountry] = useState('IN');
+    const [country] = useState('IN'); // Country is fixed to India
     const [state, setState] = useState(shippingInfo.state);
     const [pincode, setPincode] = useState(shippingInfo.pincode);
     const [phoneNo, setPhoneNo] = useState(shippingInfo.phoneNo);
@@ -33,7 +31,7 @@ const Shipping = () => {
     const shippingSubmit = (e) => {
         e.preventDefault();
 
-        if (phoneNo.length < 10 || phoneNo.length > 10) {
+        if (phoneNo.length !== 10) {
             enqueueSnackbar("Invalid Phone Number", { variant: "error" });
             return;
         }
@@ -43,19 +41,19 @@ const Shipping = () => {
 
     return (
         <>
-            <MetaData title="Siddhi Ceatives: Shipping Details" />
+            <MetaData title="Siddhi Creatives: Shipping Details" />
             <main className="w-full mt-20">
 
-                {/* <!-- row --> */}
-                <div className="flex flex-col sm:flex-row gap-3.5 w-full sm:w-11/12 mt-0 sm:mt-4 m-auto sm:mb-7 overflow-hidden">
+                <div className="flex flex-col sm:flex-row gap-3.5 w-full sm:w-11/12 m-auto sm:mt-4 mb-7 overflow-hidden">
 
-                    {/* <!-- cart column --> */}
+                    {/* Cart Column */}
                     <div className="flex-1">
-
                         <Stepper activeStep={1}>
-                            <div className="w-full bg-white">
+                            <div className="w-full bg-white shadow-lg rounded-lg p-6">
 
-                                <form onSubmit={shippingSubmit} autoComplete="off" className="flex flex-col justify-start gap-3 w-full sm:w-3/4 mx-1 sm:mx-8 my-4">
+                                <form onSubmit={shippingSubmit} autoComplete="off" className="flex flex-col justify-start gap-4 w-full">
+
+                                    <h2 className="text-xl font-semibold text-gray-800 mb-4">Shipping Information</h2>
 
                                     <TextField
                                         value={address}
@@ -104,22 +102,20 @@ const Shipping = () => {
                                     </div>
 
                                     <div className="flex gap-6">
-
                                         <FormControl fullWidth>
                                             <InputLabel id="country-select">Country</InputLabel>
                                             <Select
                                                 labelId="country-select"
                                                 id="country-select"
-                                                defaultValue={country}
+                                                value={country}
                                                 disabled
                                                 label="Country"
-                                                // onChange={(e) => setCountry(e.target.value)}
                                             >
                                                 <MenuItem value={'IN'}>India</MenuItem>
                                             </Select>
                                         </FormControl>
 
-                                        <FormControl fullWidth disabled={country ? false : true}>
+                                        <FormControl fullWidth>
                                             <InputLabel id="state-select">State</InputLabel>
                                             <Select
                                                 labelId="state-select"
@@ -134,15 +130,19 @@ const Shipping = () => {
                                                 ))}
                                             </Select>
                                         </FormControl>
-
                                     </div>
 
-                                    <button type="submit" className="bg-primary-orange w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none">save and deliver here</button>
+                                    <button 
+                                        type="submit" 
+                                        className="bg-primary-orange w-full sm:w-1/3 my-2 py-3 text-sm font-medium text-white shadow hover:shadow-lg rounded-md uppercase transition duration-300 ease-in-out">
+                                        Save and Deliver Here
+                                    </button>
                                 </form>
                             </div>
                         </Stepper>
                     </div>
 
+                    {/* Price Sidebar */}
                     <PriceSidebar cartItems={cartItems} />
                 </div>
             </main>
