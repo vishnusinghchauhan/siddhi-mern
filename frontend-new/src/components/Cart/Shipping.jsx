@@ -1,17 +1,17 @@
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
+import { useSnackbar } from 'notistack';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { saveShippingInfo } from '../../actions/cartAction';
+import states from '../../utils/states';
+import MetaData from '../Layouts/MetaData';
 import PriceSidebar from './PriceSidebar';
 import Stepper from './Stepper';
-import { useSnackbar } from 'notistack';
-import { saveShippingInfo } from '../../actions/cartAction';
-import { useNavigate } from 'react-router-dom';
-import MetaData from '../Layouts/MetaData';
-import states from '../../utils/states';
 
 const Shipping = () => {
 

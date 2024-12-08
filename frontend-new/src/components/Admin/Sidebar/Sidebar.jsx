@@ -1,18 +1,18 @@
-import { Link, useNavigate } from 'react-router-dom';
-import EqualizerIcon from '@mui/icons-material/Equalizer';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import InventoryIcon from '@mui/icons-material/Inventory';
-import GroupIcon from '@mui/icons-material/Group';
-import ReviewsIcon from '@mui/icons-material/Reviews';
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import LogoutIcon from '@mui/icons-material/Logout';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 import CloseIcon from '@mui/icons-material/Close';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
+import GroupIcon from '@mui/icons-material/Group';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import LogoutIcon from '@mui/icons-material/Logout';
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import Avatar from '@mui/material/Avatar';
-import { useDispatch, useSelector } from 'react-redux';
-import './Sidebar.css';
 import { useSnackbar } from 'notistack';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../../../actions/userAction';
+import './Sidebar.css';
 
 const navMenu = [
     {

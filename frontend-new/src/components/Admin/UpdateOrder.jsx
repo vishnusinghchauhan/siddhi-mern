@@ -1,16 +1,15 @@
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import { useSnackbar } from 'notistack';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { clearErrors, getOrderDetails, updateOrder } from '../../actions/orderAction';
 import { UPDATE_ORDER_RESET } from '../../constants/orderConstants';
 import { formatDate } from '../../utils/functions';
+import MetaData from '../Layouts/MetaData';
 import TrackStepper from '../Order/TrackStepper';
 import Loading from './Loading';
-import { Link } from 'react-router-dom';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import MetaData from '../Layouts/MetaData';
 
 const UpdateOrder = () => {
 

@@ -10,13 +10,13 @@ import Stepper from './Stepper';
 //     useStripe,
 //     useElements,
 // } from '@stripe/react-stripe-js';
-import { clearErrors } from '../../actions/orderAction';
-import { useSnackbar } from 'notistack';
-import { post } from '../../utils/paytmForm';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
+import { useSnackbar } from 'notistack';
+import { clearErrors } from '../../actions/orderAction';
+import { post } from '../../utils/paytmForm';
 import MetaData from '../Layouts/MetaData';
 
 const Payment = () => {

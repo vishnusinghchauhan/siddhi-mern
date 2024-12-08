@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import MetaData from '../Layouts/MetaData';
 import CartItem from './CartItem';
 import PriceSidebar from './PriceSidebar';
 import Stepper from './Stepper';
-import { useNavigate } from 'react-router-dom';
-import MetaData from '../Layouts/MetaData';
 
 const OrderConfirm = () => {
 

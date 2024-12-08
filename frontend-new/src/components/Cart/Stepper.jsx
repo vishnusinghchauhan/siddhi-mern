@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
 import CheckIcon from '@mui/icons-material/Check';
+import { useSelector } from 'react-redux';
 
 const Stepper = ({ activeStep, children }) => {
 

@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
+import Rating from '@mui/material/Rating';
 import { DataGrid } from '@mui/x-data-grid';
-import { useDispatch, useSelector } from 'react-redux';
 import { useSnackbar } from 'notistack';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { clearErrors, deleteProduct, getAdminProducts } from '../../actions/productAction';
-import Rating from '@mui/material/Rating';
 import { DELETE_PRODUCT_RESET } from '../../constants/productConstants';
-import Actions from './Actions';
-import MetaData from '../Layouts/MetaData';
 import BackdropLoader from '../Layouts/BackdropLoader';
+import MetaData from '../Layouts/MetaData';
+import Actions from './Actions';
 
 const ProductTable = () => {
 

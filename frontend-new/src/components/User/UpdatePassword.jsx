@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import TextField from '@mui/material/TextField'
+import TextField from '@mui/material/TextField';
 import { useSnackbar } from 'notistack';
-import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { clearErrors, loadUser, updatePassword } from '../../actions/userAction';
 import { UPDATE_PASSWORD_RESET } from '../../constants/userConstants';
 import BackdropLoader from '../Layouts/BackdropLoader';

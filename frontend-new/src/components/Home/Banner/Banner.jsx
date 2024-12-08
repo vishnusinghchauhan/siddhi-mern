@@ -1,15 +1,15 @@
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import './Banner.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import fashionSale from '../../../assets/images/Banners/fashionsale.jpg';
 import gadgetSale from '../../../assets/images/Banners/gadget-sale.jpg';
 import kitchenSale from '../../../assets/images/Banners/kitchen-sale.jpg';
+import oppo from '../../../assets/images/Banners/oppo-reno7.webp';
 import poco from '../../../assets/images/Banners/poco-m4-pro.webp';
 import realme from '../../../assets/images/Banners/realme-9-pro.webp';
-import fashionSale from '../../../assets/images/Banners/fashionsale.jpg';
-import oppo from '../../../assets/images/Banners/oppo-reno7.webp';
+import './Banner.css';
 
 export const PreviousBtn = ({ className, onClick }) => {
   return (

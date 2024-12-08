@@ -1,13 +1,13 @@
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Searchbar from './Searchbar';
-import logo from '../../../assets/images/logo.png';
-import PrimaryDropDownMenu from './PrimaryDropDownMenu';
-import SecondaryDropDownMenu from './SecondaryDropDownMenu';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import logo from '../../../assets/images/logo.png';
+import PrimaryDropDownMenu from './PrimaryDropDownMenu';
+import Searchbar from './Searchbar';
+import SecondaryDropDownMenu from './SecondaryDropDownMenu';
 
 const Header = () => {
 

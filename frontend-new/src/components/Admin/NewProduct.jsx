@@ -1,16 +1,16 @@
-import TextField from '@mui/material/TextField';
-import { useState, useEffect } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
-import MenuItem from '@mui/material/MenuItem';
-import { useDispatch, useSelector } from 'react-redux';
-import { useSnackbar } from 'notistack';
-import { useNavigate } from 'react-router-dom';
-import { NEW_PRODUCT_RESET } from '../../constants/productConstants';
-import { createProduct, clearErrors } from '../../actions/productAction';
 import ImageIcon from '@mui/icons-material/Image';
+import MenuItem from '@mui/material/MenuItem';
+import TextField from '@mui/material/TextField';
+import { useSnackbar } from 'notistack';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { clearErrors, createProduct } from '../../actions/productAction';
+import { NEW_PRODUCT_RESET } from '../../constants/productConstants';
 import { categories } from '../../utils/constants';
-import MetaData from '../Layouts/MetaData';
 import BackdropLoader from '../Layouts/BackdropLoader';
+import MetaData from '../Layouts/MetaData';
 
 const NewProduct = () => {
 

@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import { useDispatch, useSelector } from 'react-redux';
-import { useSnackbar } from 'notistack';
-import { clearErrors, deleteReview, getAllReviews } from '../../actions/productAction';
 import Rating from '@mui/material/Rating';
-import Actions from './Actions';
+import { DataGrid } from '@mui/x-data-grid';
+import { useSnackbar } from 'notistack';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearErrors, deleteReview, getAllReviews } from '../../actions/productAction';
 import { DELETE_REVIEW_RESET } from '../../constants/productConstants';
-import MetaData from '../Layouts/MetaData';
 import BackdropLoader from '../Layouts/BackdropLoader';
+import MetaData from '../Layouts/MetaData';
+import Actions from './Actions';
 
 const ReviewsTable = () => {
 

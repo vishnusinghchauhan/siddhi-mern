@@ -1,5 +1,5 @@
-import { Step, StepLabel, Stepper } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
+import { Step, StepLabel, Stepper } from '@mui/material';
 import { formatDate } from '../../utils/functions';
 
 const TrackStepper = ({ activeStep, orderOn, shippedAt, deliveredAt }) => {

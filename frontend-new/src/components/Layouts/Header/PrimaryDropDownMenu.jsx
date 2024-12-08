@@ -1,18 +1,18 @@
-import React from 'react';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatIcon from '@mui/icons-material/Chat';
 import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import { useSnackbar } from 'notistack';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../../../actions/userAction';
 
 const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
